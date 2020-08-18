@@ -21,4 +21,14 @@ const reverseString = (str: string): string => {
 	return revWord;
 };
 
-reverseString('Hello');
+//Factorial
+const factorialize = (num: number): number => {
+	let result = 1;
+	for (let i = 1; i <= num; i++) {
+		result *= i
+	}
+	return result
+}
+
+//Palindromes
+
