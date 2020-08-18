@@ -1,0 +1,20 @@
+{
+  "name": "algo_practise",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "tsc": "tsc",
+    "start": "node dist/main.js",
+    "dev": "ts-node-dev --respawn --transpileOnly ./app/main.ts",
+    "prod": "tsc && node ./build/main.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^14.6.0",
+    "ts-node-dev": "^1.0.0-pre.58",
+    "typescript": "^3.9.7"
+  }
+}
