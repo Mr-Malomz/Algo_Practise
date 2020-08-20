@@ -44,15 +44,15 @@ const palindromes = (word: string): boolean => {
 palindromes('eyebb');
 
 //Find the longest word in a string
-const findLongestWord = (word: string): string => {
+const findLongestWord = (word: string): number => {
 	//first split the word
 	let words = word.split(' ');
 	let longestWord = '';
 	for (const word of words) {
 		if (word.length > longestWord.length) longestWord = word;
 	}
-	
-	return longestWord;
+
+	return longestWord.length;
 };
 
 findLongestWord('My name is hhdhhdhhdh')
