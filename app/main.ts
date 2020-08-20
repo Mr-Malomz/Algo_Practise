@@ -62,3 +62,18 @@ const findLongestWord = (word: string): number => {
 };
 
 findLongestWord('My name is hhdhhdhhdh');
+
+//Title Case a sentence
+const titleCase = (word: string): string => {
+	let newWord = word.toLowerCase().split(' ');
+	for (let i = 0; i < newWord.length; i++) {
+		newWord[i] = newWord[i][0].toUpperCase() + newWord[i].slice(1);
+	}
+	console.log(newWord.join(' '));
+	return newWord.join(' ');
+
+	//method 2
+	return word.split(' ').map(wrd => wrd[0].toUpperCase() + wrd.slice(1)).join(' ')
+};
+
+titleCase('ddy name is hhdhhdhhdh');
