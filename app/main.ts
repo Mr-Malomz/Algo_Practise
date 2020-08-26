@@ -69,11 +69,37 @@ const titleCase = (word: string): string => {
 	for (let i = 0; i < newWord.length; i++) {
 		newWord[i] = newWord[i][0].toUpperCase() + newWord[i].slice(1);
 	}
-	console.log(newWord.join(' '));
 	return newWord.join(' ');
 
 	//method 2
-	return word.split(' ').map(wrd => wrd[0].toUpperCase() + wrd.slice(1)).join(' ')
+	return word
+		.split(' ')
+		.map((wrd) => wrd[0].toUpperCase() + wrd.slice(1))
+		.join(' ');
 };
 
 titleCase('ddy name is hhdhhdhhdh');
+
+//Return largest number in frm each array
+const largestNumber = (arr: number[][]): number[] => {
+	let newArray: number[] = [];
+	let firstItemArr: any;
+	for (let i = 0; i < arr.length; i++) {
+		let firstItemArr = arr[i][0];
+		for (let j = 0; j < arr[i].length; j++) {
+			let currentElement = arr[i][j];
+			if (currentElement >= firstItemArr) {
+				firstItemArr = currentElement
+			}
+		}
+		newArray.push(firstItemArr)
+	}
+	console.log(newArray);
+	return newArray;
+};
+
+largestNumber([
+	[1, 3, 4, 6],
+	[65, 7, 6, 6],
+	[100, 9, 76, 56]
+]);
