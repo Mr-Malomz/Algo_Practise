@@ -89,10 +89,10 @@ const largestNumber = (arr: number[][]): number[] => {
 		for (let j = 0; j < arr[i].length; j++) {
 			let currentElement = arr[i][j];
 			if (currentElement >= firstItemArr) {
-				firstItemArr = currentElement
+				firstItemArr = currentElement;
 			}
 		}
-		newArray.push(firstItemArr)
+		newArray.push(firstItemArr);
 	}
 	console.log(newArray);
 	return newArray;
@@ -101,5 +101,13 @@ const largestNumber = (arr: number[][]): number[] => {
 largestNumber([
 	[1, 3, 4, 6],
 	[65, 7, 6, 6],
-	[100, 9, 76, 56]
+	[100, 9, 76, 56],
 ]);
+
+//Confirm the ending of a word
+const confirmEnding = (word: string, char: string): boolean => {
+	console.log(word[word.length - 1] === char)
+	return word[word.length - 1] === char
+};
+
+confirmEnding('alaba', 'a')
