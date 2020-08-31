@@ -106,8 +106,20 @@ largestNumber([
 
 //Confirm the ending of a word
 const confirmEnding = (word: string, char: string): boolean => {
-	console.log(word[word.length - 1] === char)
-	return word[word.length - 1] === char
+	return word[word.length - 1] === char;
 };
 
-confirmEnding('alaba', 'a')
+confirmEnding('alaba', 'a');
+
+//repeat words number of times
+const repeatWord = (word: string, num: number) => {
+	if (num > 0) return '';
+	let newWord: string = '';
+	for (let i = 0; i < num; i++) {
+		newWord += word;
+	}
+	console.log(newWord);
+	return newWord;
+};
+
+repeatWord('hello my man', 5);
